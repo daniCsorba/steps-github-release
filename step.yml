@@ -1,6 +1,38 @@
 title: Github Release
-summary: Create Github Release
-description: Create Github Release
+summary: Create GitHub Release
+description: |
+  The Step creates a GitHub release, which you can package and make available for a broader audience to download and use.
+
+  ### Configuring the Step
+
+  1. In the **Personal API token** input, you need to provide a token you generated on GitHub, with `repo/public_repo` scope. You can generate your token [here](https://github.com/settings/tokens/).
+  1. Add your GitHub username to the **Username** input.
+  1. The **Repository URL** input is populated automatically with an env var which has the value of the repository field of the Settings of your app. 
+  1. Fill out your app's release information: 
+    * **Tag**: Write the name of your tag here.
+    * **Commit**: Write the commit tag here.
+    * **Release name**: Write the name of the release here.
+    * **Release body**: Write the release body here. 
+  1. Select `yes` in the **Draft** input to create a draft release or `no` to create a published one.
+  1. Select `yes` in the **Pre-release** input to mark your release as a pre-release or `no` to release it as a full release.
+  1. Specify which files to add to your release in the **Files to upload** input. Optionally, you can rename these files if you want to give them a more descriptive name. 
+  1. The **GitHub API base URL** is the URL for GitHub's API service. You have to modify this input if you are running an Enterprise GitHub instance. For more information, check out the guide on [How to register a GitHub Enterprise repository](https://discuss.bitrise.io/t/how-to-register-a-github-enterprise-repository/218). 
+  1. The **GitHub Upload base url** is the URL for your GitHub upload. You have to modify this if you are running an Enterprise GitHub instance.
+
+  ### Troubleshooting
+
+  If you get a 404 response when running the Step, check your token's scope and validity. 
+
+  ### Useful links
+
+  * [Connecting your GitHub/GitLab/Bitbucket account to Bitrise](https://devcenter.bitrise.io/en/accounts/connecting-to-services/connecting-your-github-gitlab-bitbucket-account-to-bitrise.html)
+  * [How to register a GitHub Enterprise repository](https://discuss.bitrise.io/t/how-to-register-a-github-enterprise-repository/218)
+  * [Generating a GitHub Personal API token](https://github.com/settings/tokens/)
+
+  ### Related Steps
+
+  * [GitHub Status](https://www.bitrise.io/integrations/steps/github-status)
+  * [Git Clone Repository](https://www.bitrise.io/integrations/steps/git-clone)
 
 website: https://github.com/bitrise-steplib/steps-github-release
 source_code_url: https://github.com/bitrise-steplib/steps-github-release
